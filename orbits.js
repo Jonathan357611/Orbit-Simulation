@@ -67,45 +67,6 @@ class Simulation {
         return;
     }
 
-    drawLines() {
-        //const svg = document.getElementById("mySvg");
-        //
-        //// Get the positions of each div
-        //const divs = document.querySelectorAll(".simulated_object");
-        //const positions = [];
-        //for (let i = 0; i < divs.length; i++) {
-        //    const rect = divs[i].getBoundingClientRect();
-        //    const x = rect.left + rect.width / 2;
-        //    const y = rect.top + rect.height / 2;
-        //    positions.push({ x, y });
-        //}
-        //
-        //// Calculate the path of the line
-        //let path = "";
-        //for (let i = 0; i < positions.length; i++) {
-        //    const { x, y } = positions[i];
-        //    if (i === 0) {
-        //        path += `M ${x} ${y} `;
-        //    } else if (i === positions.length - 1) {
-        //        path += `L ${x} ${y} Z`;
-        //    } else {
-        //        path += `L ${x} ${y} `;
-        //    }
-        //}
-        //
-        // Create the path element and set its attributes
-        //const pathElement = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        //pathElement.setAttribute("d", path);
-        //pathElement.setAttribute("stroke", "white");
-        //pathElement.setAttribute("stroke-width", 2);
-        //pathElement.setAttribute("fill", "none");
-        //
-        //// Add the path element to the SVG element
-        //svg.appendChild(pathElement);
-
-
-    }
-
     calculatePosition(object_num) {
         var obj_1 = this.objects[object_num];
         if (this.objects.length != 1) {
@@ -174,7 +135,7 @@ class Simulation {
 
                 }
                 self.drawObject(object);
-                self.drawLines();
+                //self.drawLines();
                 // else {
                 //    self.drawObject(object);
                 //}
@@ -188,42 +149,3 @@ class Simulation {
         simulation_tick();
     }
 }
-
-////simulation = new Simulation();
-////
-////var distance = 149597871;
-////var mini_factor = (100 / distance);
-////var miniature_distance = distance * mini_factor;
-//alert(miniature_distance)
-
-//simulation.addObject(100000, 0.2, 106, 50, "white", 0, 40, is_static = false);
-//simulation.addObject(1 * 0.5, 5, 100, 50, "blue", 0, 40, false);
-
-//simulation.addObject(10000000, 3, 100, 50, "red", -10, 10, false)
-//simulation.addObject(8330000000000000, 3, 70, 30, "red", 0, 50, false)
-//simulation.addObject(8330000000000000, 3, 30, 70, "blue", 0, -50, false)
-//simulation.addObject(100000000000, 3 / 8, 50, 50, "white", 0 - 1, 0, false)
-
-//simulation.addObject(10000000000, 1, 90, 0, "green", 60, 60, false)
-
-////simulation.addObject(3330000000000000, 5, 50, 50, "yellow", 0, 0, false);
-////
-////simulation.addObject(10000000000, 2, 64, 50, "blue", 0, 100, false)
-////simulation.addObject(10000000000, 0.2, 85, 50, "red", 0, 50, false)
-
-//simulation.addObject(5 * 10 ** 30, 2, .72 * 100, .64 * 100, "blue", 2.42 * Math.PI * 100, 0, false);
-//simulation.addObject(5 * 10 ** 30, 2, -.72 * 100, -.64 * 100, "red", -2.42 * Math.PI * 100, 0, false)
-
-//simulation.addObject(10000000000000000, 10, 50, 50, "yellow", 0, 0, false);
-//simulation.addObject(1000000000000000, 4, 0, 50, "blue", 0, 120, true);
-//simulation.addObject(1, 4, 60, 50, "red", 0, 260, false);
-
-//simulation.addObject(400000000000000000, 5, 0, 0, "red", 350, 0, false)
-//simulation.addObject(400000000000000000, 5, 100, 0, "red", 0, 350, false)
-//simulation.addObject(400000000000000000, 5, 0, 100, "red", 0, -350, false)
-//simulation.addObject(400000000000000000, 5, 100, 100, "red", -350, 0, false)
-
-//simulation.addObject(999900000000000 * 1.5, 7, 25, 50, "yellow", 0, 0, true);
-//simulation.addObject(990000000000000 * 1.2, 7, 75, 50, "yellow", 0, 0, true);
-////simulation.addObject(100000000000, 4, 50, 50, "blue", 70, 70);
-//simulation.addObject(1000, 4, 60, 100, "blue", 0, 0);

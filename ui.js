@@ -26,7 +26,7 @@ class UI {
     addObject(mass, size, pos_x, pos_y, color, init_speed_x, init_speed_y, is_static) {
         this.simulation.addObject(mass, size, pos_x, pos_y, color, init_speed_x, init_speed_y, is_static);
 
-        var new_object = this.simulation.objects[this.simulation.objects.length - 1];
+        // var new_object = this.simulation.objects[this.simulation.objects.length - 1];
         this.showObjectList();
     }
 
@@ -55,61 +55,6 @@ class UI {
         }
         tick();
     }
-
-    //drawLineXY(objectA, objectB) {
-    //    //const objectA = document.getElementById("object_a");
-    //    //const objectB = document.getElementById("object_b");
-    //
-    //    // Create a new div element to represent the line
-    //    const line = document.createElement("div");
-    //    line.style.position = "absolute";
-    //    line.style.border = "1px solid white";
-    //    document.getElementById("paths").appendChild(line);
-    //
-    //    // Calculate positions of the two objects
-    //    const x1 = objectA.offsetLeft + objectA.offsetWidth / 2;
-    //    const y1 = objectA.offsetTop + objectA.offsetHeight / 2;
-    //    const x2 = objectB.offsetLeft + objectB.offsetWidth / 2;
-    //    const y2 = objectB.offsetTop + objectB.offsetHeight / 2;
-    //
-    //    // Calculate distance between the two objects
-    //    const distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-    //
-    //    // Calculate angle between the two objects
-    //    const angle = Math.atan2(y2 - y1, x2 - x1);
-    //
-    //    // Set the dimensions and position of the line element
-    //    const borderWidth = 1;
-    //    line.style.width = distance + "px";
-    //    line.style.height = "1px";
-    //    line.style.left = (x1 - borderWidth / 2) + "px";
-    //    line.style.top = (y1 - borderWidth / 2) + "px";
-    //    line.style.transform = "rotate(" + angle + "rad)";
-    //
-    //
-    //}
-
-    //clearLines() {
-    //    document.getElementById("paths").innerHTML = "";
-    //}
-
-    //drawLines() {
-    //    this.clearLines();
-    //    if (document.getElementById("checkbox_show_path").checked == true) {
-    //        for (var i = 0; i < this.simulation.objects.length; i++) {
-    //            let object_a = document.getElementById(this.simulation.objects[i]["id"]);
-    //
-    //            for (var j = 0; j < this.simulation.objects.length; j++) {
-    //                let object_b = document.getElementById(this.simulation.objects[j]["id"]);
-    //                if (object_a != object_b) {
-    //                    this.drawLineXY(object_a, object_b);
-    //                }
-    //            }
-    //        }
-    //    }
-    //
-    //}
-
 }
 
 function isNumeric(str) {
@@ -152,6 +97,14 @@ document.getElementById("ui_spawn_button").addEventListener("click", function ()
 
 });
 
+window.addEventListener("load", () => {
+    // (A) CHECK FOR MOBILE
+    var isMobile = navigator.userAgent.toLowerCase().match(/mobile/i);
+
+    // (B) DO SOMETHING...
+    if (isMobile) { alert("Hey there! Thanks for your interest in my project! Unfortunately, this is one of my few mobile unfriendly sites :(\n\nSo please consider trying it on your PC!") }
+    else { console.log("Not mobile device"); }
+});
 
 ui = new UI(simulation, document.getElementById("ui_objects_list"));
 ui.addObject(3330000000000000, 5, 50, 50, "yellow", 0, 0, false);
