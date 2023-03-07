@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbits</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <script defer src="orbits.js"></script>
+    <script defer src="ui.js"></script>
+</head>
+<body>
+    
+    <h1>n-Body Simulation</h1>
+    <div class="container">
+        <div class="border">
+            <div id="simulation">
+                
+            </div>
+        </div>
+        <div class="ui">
+            <!--<div class="ui_section" id="controls">
+                <div class="checkbox">
+                    <input id="checkbox_show_path" type="checkbox">Show path
+                </div>
+                <br>
+                <div class="checkbox">
+                    <input type="checkbox">Show influence
+                </div>
+                <br>
+            </div>
+            <br>-->
+            <div class="ui_section" id="add_body">
+                Mass <input id="ui_mass_input" placeholder="Mass">
+                <br>x-movement <input id="ui_init_move_x_input" placeholder="Initial movement X">
+                <br>y-movement <input id="ui_init_move_y_input" placeholder="Initial movement Y">
+                <br>color <input id="ui_color_input" placeholder="color"><br>
+                size <input id="ui_size_input" placeholder="size"><br>
+                x-position <input id="ui_pos_x_input" placeholder="x-position">
+                <br>y-position <input id="ui_pos_y_input" placeholder="x-position">
+                <br><br><br><br>
+                <div class="checkbox">
+                    <input id="ui_static_checkbox" type="checkbox">Static
+                </div>
+                <br>
+                <button id="ui_spawn_button">Spawn</button>
+            </div>
+            <br>
+            <div class="ui_section ui_list">
+                <h2>Objects</h2>
+                <div id="ui_objects_list"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
