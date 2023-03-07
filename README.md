@@ -16,3 +16,5 @@ Things I want to add in the future:
 - Showing paths, including an orbit-preview
 
 And... thats it for now, theres really not that much to do currently :(
+
+[Try it out](https://jonathan357611.github.io/Orbit-Simulation)
